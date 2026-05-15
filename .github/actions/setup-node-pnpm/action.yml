@@ -1,17 +1,12 @@
 name: Setup Node.js with pnpm
 description: >
-  Composite action: checkout, install pnpm, setup Node.js 20,
+  Composite action: install pnpm, setup Node.js 20,
   run Aikido safe-chain supply-chain check, and install dependencies.
+  Requires actions/checkout to have already run in the calling job.
 
 runs:
   using: composite
   steps:
-    - name: Checkout repository
-      uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
-      with:
-        fetch-depth: 0
-        persist-credentials: false
-
     - name: Install pnpm
       uses: pnpm/action-setup@fc06bc1257f339d1d5d8b3a19a8cae5388b55320 # v4.4.0
       with:
