@@ -12,5 +12,25 @@
   "packageManager": "pnpm@10.23.0",
   "dependencies": {
     "fuels": "^0.103.0"
+  },
+  "devDependencies": {
+    "vite": "^8.3.8",
+    "vitest": "^4.1.12"
+  },
+  "pnpm": {
+    "overrides": {
+      "bn.js": ">=5.2.5",
+      "fflate": ">=0.8.3",
+      "glob": ">=14.0.2",
+      "handlebars": ">=4.7.10",
+      "minimatch": ">=11.0.1",
+      "tinypool": ">=2.1.2",
+      "toml": ">=5.0.1"
+    },
+    "peerDependencyRules": {
+      "allowedVersions": {
+        "vitest": "*"
+      }
+    }
   }
 }
